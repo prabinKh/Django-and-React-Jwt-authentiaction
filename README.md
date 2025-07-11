@@ -1,4 +1,3 @@
-<img width="1076" height="432" alt="Screenshot 2025-07-11 at 8 35 10 PM" src="https://github.com/user-attachments/assets/762d9eed-934f-435a-8d7a-dac771bcd4c8" />
 
 # Django + React JWT Authentication Notes App
 
@@ -166,11 +165,13 @@ DEBUG=True
 
 ## Screenshots
 
+
 **Login Page**  
 
-![Login Page](<img width="1116" height="527" alt="Screenshot 2025-07-11 at 8 34 51 PM" src="https://github.com/user-attachments/assets/7718d3df-5c37-4221-970c-127053fa27a7" />)
-![Register Page](<img width="1076" height="432" alt="Screenshot 2025-07-11 at 8 35 10 PM" src="https://github.com/user-attachments/assets/3ded66a1-ef17-4e0c-b8f2-7f160569232c" />)
-**Notes Dashboard**  <img width="1238" height="653" alt="Screenshot 2025-07-11 at 8 33 55 PM" src="https://github.com/user-attachments/assets/38f434c0-ec53-4a27-a932-8d0f4fc7cfe9" />
+![Login Page](<img width="1116" height="527" alt="Screenshot 2025-07-11 at 8 34 51 PM" src="https://github.com/user-attachments/assets/abd453f8-5ddd-42cf-a536-9b35a8ecd194" />)
+
+![Register Page](<img width="1076" height="432" alt="Screenshot 2025-07-11 at 8 35 10 PM" src="https://github.com/user-attachments/assets/762d9eed-934f-435a-8d7a-dac771bcd4c8" />
+)
 
 ![Notes Dashboard](<img width="1238" height="653" alt="Screenshot 2025-07-11 at 8 33 55 PM" src="https://github.com/user-attachments/assets/b28f8447-a53f-4944-8d94-ba61969fc283" />)
 
