@@ -47,12 +47,12 @@ This is a full-stack application combining **Django REST Framework** and **React
    venv\Scripts\activate     # Windows
 
 
-```
-pip install django djangorestframework djangorestframework-simplejwt python-dotenv
+         ```bash
+         pip install django djangorestframework djangorestframework-simplejwt             python-dotenv
+   
 
-
-python manage.py makemigrations
-python manage.py migrate
+      ```python manage.py makemigrations
+      python manage.py migrate
 
 
 python manage.py createsuperuser
