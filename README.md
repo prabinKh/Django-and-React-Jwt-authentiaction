@@ -172,8 +172,10 @@ DEBUG=True
 ![Register Page](<img width="1076" height="432" alt="Screenshot 2025-07-11 at 8 35 10 PM" src="https://github.com/user-attachments/assets/3ded66a1-ef17-4e0c-b8f2-7f160569232c" />)
 **Notes Dashboard**  <img width="1238" height="653" alt="Screenshot 2025-07-11 at 8 33 55 PM" src="https://github.com/user-attachments/assets/38f434c0-ec53-4a27-a932-8d0f4fc7cfe9" />
 
-![Notes Dashboard](<img width="1238" height="653" alt="Screenshot 2025-07-11 at 8 33 55 PM" src="https://github.com/user-attachments/assets/38f434c0-ec53-4a2<img width="2" height="6" alt="Screenshot 2025-07-11 at 8 34 39 PM" src="https://github.com/user-attachments/assets/51125677-71f6-4069-85e0-be235767ea63" />
-7-a932-8d0f4fc7cfe9" />)
+![Notes Dashboard](<img width="1238" height="653" alt="Screenshot 2025-07-11 at 8 33 55 PM" src="https://github.com/user-attachments/assets/b28f8447-a53f-4944-8d94-ba61969fc283" />)
+
+
+
 
 
 
