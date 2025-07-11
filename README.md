@@ -1,23 +1,34 @@
-Django + React JWT Authentication Notes App
-A full-stack application combining Django REST Framework and React to build a simple Notes app with JWT authentication.
 
-Features
 
-User registration and login with JWT tokens
-Token refresh handling on the frontend
-Protected routes (only authenticated users can access notes)
-Create and delete notes tied to the logged-in user
-Modern React frontend with Vite
-CORS support for API access
+# Django + React JWT Authentication Notes App
 
-Tech Stack
+A full-stack application combining **Django REST Framework** and **React** to build a simple Notes app with **JWT authentication**.
 
-Backend: Django, Django REST Framework, Simple JWT
-Frontend: React, Vite, Axios, React Router
-Database: SQLite (default Django DB)
-Authentication: JSON Web Tokens (JWT)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/django-4.2+-green.svg)](https://www.djangoproject.com/)
+[![React](https://img.shields.io/badge/react-18.2+-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/vite-5.0+-yellow.svg)](https://vitejs.dev/)
 
-Project Structure
+## Features
+
+- User registration and login with JWT tokens
+- Token refresh handling on the frontend
+- Protected routes (only authenticated users can access notes)
+- Create and delete notes tied to the logged-in user
+- Modern React frontend with Vite
+- CORS support for API access
+
+## Tech Stack
+
+- **Backend**: Django, Django REST Framework, Simple JWT
+- **Frontend**: React, Vite, Axios, React Router
+- **Database**: SQLite (default Django DB)
+- **Authentication**: JSON Web Tokens (JWT)
+
+## Project Structure
+
+```
 .
 ├── backend/
 │   ├── api/                # Django app (models, serializers, views, urls)
@@ -27,156 +38,164 @@ Project Structure
     ├── src/                # React components and pages
     ├── public/
     └── package.json
+```
 
-Getting Started
-Prerequisites
+## Getting Started
 
-Python 3.8+
-Node.js 18+
-npm 8+
-Git
+### Prerequisites
 
-Backend Setup (Django)
+- Python 3.8+
+- Node.js 18+
+- npm 8+
+- Git
 
-Clone the repository
-git clone https://github.com/your-username/your-repo.git
-cd your-repo/backend
+### Backend Setup (Django)
 
+1. **Clone the repository**
 
-Create and activate a virtual environment
-python -m venv venv
-# macOS/Linux
-source venv/bin/activate
-# Windows
-venv\Scripts\activate
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo/backend
+   ```
 
+2. **Create and activate a virtual environment**
 
-Install dependencies
-pip install django djangorestframework djangorestframework-simplejwt python-dotenv
+   ```bash
+   python -m venv venv
+   # macOS/Linux
+   source venv/bin/activate
+   # Windows
+   venv\Scripts\activate
+   ```
 
+3. **Install dependencies**
 
-Run migrations
-python manage.py makemigrations
-python manage.py migrate
+   ```bash
+   pip install django djangorestframework djangorestframework-simplejwt python-dotenv
+   ```
 
+4. **Run migrations**
 
-Create a superuser (optional)
-python manage.py createsuperuser
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
 
+5. **Create a superuser (optional)**
 
-Start the Django server
-python manage.py runserver
+   ```bash
+   python manage.py createsuperuser
+   ```
 
-The backend API will be available at:http://127.0.0.1:8000/
+6. **Start the Django server**
 
+   ```bash
+   python manage.py runserver
+   ```
 
-Frontend Setup (React)
+   The backend API will be available at:  
+   `http://127.0.0.1:8000/`
 
-Navigate to the frontend directory
-cd ../frontend
+### Frontend Setup (React)
 
+1. **Navigate to the frontend directory**
 
-Install dependencies
-npm install
+   ```bash
+   cd ../frontend
+   ```
 
+2. **Install dependencies**
 
-Start the development server
-npm run dev
+   ```bash
+   npm install
+   ```
 
-The React app will be running at:http://localhost:5173/
+3. **Start the development server**
 
+   ```bash
+   npm run dev
+   ```
 
-API Endpoints
+   The React app will be running at:  
+   `http://localhost:5173/`
 
+## API Endpoints
 
+| Endpoint                        | Method | Description                     |
+|---------------------------------|--------|---------------------------------|
+| `/api/register/`                | POST   | Register a new user             |
+| `/api/token/`                   | POST   | Obtain JWT access/refresh tokens|
+| `/api/token/refresh/`           | POST   | Refresh JWT access token        |
+| `/api/notes/`                   | GET    | List user notes                 |
+| `/api/notes/`                   | POST   | Create a new note               |
+| `/api/notes/delete/<id>/`       | DELETE | Delete a note by ID             |
 
-Endpoint
-Method
-Description
+## Authentication Flow
 
+- **On login**: The backend issues an access token and a refresh token, stored in `localStorage`.
+- **On each request**: The `Authorization: Bearer <access_token>` header is sent via Axios.
+- **If the access token expires**: The frontend uses the refresh token to obtain a new access token.
 
+## Environment Variables
 
-/api/register/
-POST
-Register a new user
+Create a `.env` file in the `backend` directory:
 
-
-/api/token/
-POST
-Obtain JWT access/refresh tokens
-
-
-/api/token/refresh/
-POST
-Refresh JWT access token
-
-
-/api/notes/
-GET
-List user notes
-
-
-/api/notes/
-POST
-Create a new note
-
-
-/api/notes/delete/<id>/
-DELETE
-Delete a note by ID
-
-
-Authentication Flow
-
-On login: The backend issues an access token and a refresh token, stored in localStorage.
-On each request: The Authorization: Bearer <access_token> header is sent via Axios.
-If the access token expires: The frontend uses the refresh token to obtain a new access token.
-
-Environment Variables
-Create a .env file in the backend directory:
+```ini
 SECRET_KEY=your_secret_key
 DEBUG=True
+```
 
-Frontend Structure
+## Frontend Structure
 
-Form.jsx: Handles login and registration forms.
-ProtectedRoute.jsx: Protects routes requiring authentication.
-Note.jsx: Displays a single note.
-Home.jsx: Lists notes and handles note creation/deletion.
-App.jsx: Routing configuration.
+- `Form.jsx`: Handles login and registration forms.
+- `ProtectedRoute.jsx`: Protects routes requiring authentication.
+- `Note.jsx`: Displays a single note.
+- `Home.jsx`: Lists notes and handles note creation/deletion.
+- `App.jsx`: Routing configuration.
 
-Running in Production
+## Running in Production
 
-Set DEBUG=False in backend/project/settings.py.
+1. Set `DEBUG=False` in `backend/project/settings.py`.
+2. Configure `ALLOWED_HOSTS` in Django settings.
+3. Use a production-ready server (e.g., Gunicorn, Nginx).
+4. Build the frontend:
 
-Configure ALLOWED_HOSTS in Django settings.
+   ```bash
+   cd frontend
+   npm run build
+   ```
 
-Use a production-ready server (e.g., Gunicorn, Nginx).
+5. Serve the static build files or deploy to a service like Vercel or Netlify.
 
-Build the frontend:
-cd frontend
-npm run build
+## Screenshots
 
+**Login Page**  
+![Login Page](screenshots/login.png)
 
-Serve the static build files or deploy to a service like Vercel or Netlify.
+**Notes Dashboard**  
+![Notes Dashboard](screenshots/dashboard.png)
 
+*Note: Replace `screenshots/login.png` and `screenshots/dashboard.png` with actual screenshot paths after adding them to the repository.*
 
-Screenshots
-Login Page
-Notes Dashboard
-Note: Replace screenshots/login.png and screenshots/dashboard.png with actual screenshot paths after adding them to the repository.
-Contributing
+## Contributing
+
 Contributions are welcome! Please follow these steps:
 
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Commit your changes (git commit -m "Add your feature").
-Push to the branch (git push origin feature/your-feature).
-Open a pull request.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m "Add your feature"`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-Contact
-For questions or feedback, open an issue or contact your-email@example.com.
+## License
 
-Tip: If you'd like to add specific badges, placeholders for screenshots, or further customization, let me know!
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, open an issue or contact [your-email@example.com](mailto:your-email@example.com).
+
+---
+
+*Tip*: If you'd like to add specific badges, placeholders for screenshots, or further customization, let me know!
+
