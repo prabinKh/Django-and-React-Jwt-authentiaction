@@ -1,14 +1,10 @@
-
+<img width="1076" height="432" alt="Screenshot 2025-07-11 at 8 35 10 PM" src="https://github.com/user-attachments/assets/762d9eed-934f-435a-8d7a-dac771bcd4c8" />
 
 # Django + React JWT Authentication Notes App
 
 A full-stack application combining **Django REST Framework** and **React** to build a simple Notes app with **JWT authentication**.
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
-[![Django](https://img.shields.io/badge/django-4.2+-green.svg)](https://www.djangoproject.com/)
-[![React](https://img.shields.io/badge/react-18.2+-blue.svg)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/vite-5.0+-yellow.svg)](https://vitejs.dev/)
+
 
 ## Features
 
@@ -166,36 +162,19 @@ DEBUG=True
    ```
 
 5. Serve the static build files or deploy to a service like Vercel or Netlify.
+<img width="1076" height="432" alt="Screenshot 2025-07-11 at 8 35 10 PM" src="https://github.com/user-attachments/assets/3ded66a1-ef17-4e0c-b8f2-7f160569232c" />
 
 ## Screenshots
 
 **Login Page**  
-![Login Page](screenshots/login.png)
 
-**Notes Dashboard**  
-![Notes Dashboard](screenshots/dashboard.png)
+![Login Page](<img width="1116" height="527" alt="Screenshot 2025-07-11 at 8 34 51 PM" src="https://github.com/user-attachments/assets/7718d3df-5c37-4221-970c-127053fa27a7" />)
+![Register Page](<img width="1076" height="432" alt="Screenshot 2025-07-11 at 8 35 10 PM" src="https://github.com/user-attachments/assets/3ded66a1-ef17-4e0c-b8f2-7f160569232c" />)
+**Notes Dashboard**  <img width="1238" height="653" alt="Screenshot 2025-07-11 at 8 33 55 PM" src="https://github.com/user-attachments/assets/38f434c0-ec53-4a27-a932-8d0f4fc7cfe9" />
 
-*Note: Replace `screenshots/login.png` and `screenshots/dashboard.png` with actual screenshot paths after adding them to the repository.*
+![Notes Dashboard](<img width="1238" height="653" alt="Screenshot 2025-07-11 at 8 33 55 PM" src="https://github.com/user-attachments/assets/38f434c0-ec53-4a2<img width="2" height="6" alt="Screenshot 2025-07-11 at 8 34 39 PM" src="https://github.com/user-attachments/assets/51125677-71f6-4069-85e0-be235767ea63" />
+7-a932-8d0f4fc7cfe9" />)
 
-## Contributing
 
-Contributions are welcome! Please follow these steps:
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -m "Add your feature"`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Open a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For questions or feedback, open an issue or contact [your-email@example.com](mailto:your-email@example.com).
-
----
-
-*Tip*: If you'd like to add specific badges, placeholders for screenshots, or further customization, let me know!
 
