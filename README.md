@@ -168,12 +168,12 @@ DEBUG=True
 
 **Login Page**  
 
-![Login Page](<img width="1116" height="527" alt="Screenshot 2025-07-11 at 8 34 51 PM" src="https://github.com/user-attachments/assets/abd453f8-5ddd-42cf-a536-9b35a8ecd194" />)
+<img width="1116" height="527" alt="Screenshot 2025-07-11 at 8 34 51 PM" src="https://github.com/user-attachments/assets/abd453f8-5ddd-42cf-a536-9b35a8ecd194" />
 
-![Register Page](<img width="1076" height="432" alt="Screenshot 2025-07-11 at 8 35 10 PM" src="https://github.com/user-attachments/assets/762d9eed-934f-435a-8d7a-dac771bcd4c8" />
-)
+<img width="1076" height="432" alt="Screenshot 2025-07-11 at 8 35 10 PM" src="https://github.com/user-attachments/assets/762d9eed-934f-435a-8d7a-dac771bcd4c8" />
 
-![Notes Dashboard](<img width="1238" height="653" alt="Screenshot 2025-07-11 at 8 33 55 PM" src="https://github.com/user-attachments/assets/b28f8447-a53f-4944-8d94-ba61969fc283" />)
+
+<img width="1238" height="653" alt="Screenshot 2025-07-11 at 8 33 55 PM" src="https://github.com/user-attachments/assets/b28f8447-a53f-4944-8d94-ba61969fc283" />
 
 
 
