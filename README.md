@@ -1,7 +1,7 @@
-📝 Django + React JWT Authentication Notes App
-This is a full-stack application combining Django REST Framework and React to build a simple Notes app with JWT authentication.
+Django + React JWT Authentication Notes App
+A full-stack application combining Django REST Framework and React to build a simple Notes app with JWT authentication.
 
-✅ Features
+Features
 
 User registration and login with JWT tokens
 Token refresh handling on the frontend
@@ -10,16 +10,14 @@ Create and delete notes tied to the logged-in user
 Modern React frontend with Vite
 CORS support for API access
 
-
-🛠️ Tech Stack
+Tech Stack
 
 Backend: Django, Django REST Framework, Simple JWT
 Frontend: React, Vite, Axios, React Router
 Database: SQLite (default Django DB)
 Authentication: JSON Web Tokens (JWT)
 
-
-📂 Project Structure
+Project Structure
 .
 ├── backend/
 │   ├── api/                # Django app (models, serializers, views, urls)
@@ -30,9 +28,20 @@ Authentication: JSON Web Tokens (JWT)
     ├── public/
     └── package.json
 
+Getting Started
+Prerequisites
 
-🚀 Getting Started
-📦 Backend Setup (Django)
+Python 3.8+
+Node.js 18+
+npm 8+
+Git
+
+Backend Setup (Django)
+
+Clone the repository
+git clone https://github.com/your-username/your-repo.git
+cd your-repo/backend
+
 
 Create and activate a virtual environment
 python -m venv venv
@@ -58,98 +67,116 @@ python manage.py createsuperuser
 Start the Django server
 python manage.py runserver
 
-The backend API will be available at:👉 http://127.0.0.1:8000/
+The backend API will be available at:http://127.0.0.1:8000/
 
 
+Frontend Setup (React)
 
-⚛️ Frontend Setup (React)
+Navigate to the frontend directory
+cd ../frontend
+
 
 Install dependencies
-cd frontend
 npm install
 
 
 Start the development server
 npm run dev
 
-The React app will be running at:👉 http://localhost:5173/
+The React app will be running at:http://localhost:5173/
+
+
+API Endpoints
 
 
 
-🌐 API Endpoints
-
-User RegistrationPOST /api/register/ (you may need to create this route)
-
-Token Obtain PairPOST /api/token/
-
-Token RefreshPOST /api/token/refresh/
-
-Notes CRUD  
-
-GET /api/notes/ – list user notes  
-POST /api/notes/ – create a new note  
-DELETE /api/notes/delete/<id>/ – delete a note by ID
+Endpoint
+Method
+Description
 
 
 
-
-🔑 Authentication Flow
-
-✅ On login:  
-
-The backend issues an access token and a refresh token.  
-Tokens are saved in localStorage.
+/api/register/
+POST
+Register a new user
 
 
-✅ On each request:  
-
-The Authorization: Bearer <access_token> header is automatically sent via Axios.
-
-
-✅ If the access token expires:  
-
-The frontend automatically refreshes it using the refresh token.
+/api/token/
+POST
+Obtain JWT access/refresh tokens
 
 
+/api/token/refresh/
+POST
+Refresh JWT access token
 
 
-📝 Environment Variables
-Create a .env file in your Django backend to store secrets:
+/api/notes/
+GET
+List user notes
+
+
+/api/notes/
+POST
+Create a new note
+
+
+/api/notes/delete/<id>/
+DELETE
+Delete a note by ID
+
+
+Authentication Flow
+
+On login: The backend issues an access token and a refresh token, stored in localStorage.
+On each request: The Authorization: Bearer <access_token> header is sent via Axios.
+If the access token expires: The frontend uses the refresh token to obtain a new access token.
+
+Environment Variables
+Create a .env file in the backend directory:
 SECRET_KEY=your_secret_key
 DEBUG=True
 
+Frontend Structure
 
-🧩 Frontend Structure
-
-Form.jsx: Handles login and registration forms.  
-ProtectedRoute.jsx: Protects routes requiring authentication.  
-Note.jsx: Displays a single note.  
-Home.jsx: Lists notes and handles note creation/deletion.  
+Form.jsx: Handles login and registration forms.
+ProtectedRoute.jsx: Protects routes requiring authentication.
+Note.jsx: Displays a single note.
+Home.jsx: Lists notes and handles note creation/deletion.
 App.jsx: Routing configuration.
 
+Running in Production
 
-✅ Running in Production
+Set DEBUG=False in backend/project/settings.py.
 
-Set DEBUG=False in Django settings.  
+Configure ALLOWED_HOSTS in Django settings.
 
-Set ALLOWED_HOSTS appropriately.  
-
-Use a production-ready server (e.g., Gunicorn, Nginx).  
+Use a production-ready server (e.g., Gunicorn, Nginx).
 
 Build the frontend:
+cd frontend
 npm run build
 
 
 Serve the static build files or deploy to a service like Vercel or Netlify.
 
 
+Screenshots
+Login Page
+Notes Dashboard
+Note: Replace screenshots/login.png and screenshots/dashboard.png with actual screenshot paths after adding them to the repository.
+Contributing
+Contributions are welcome! Please follow these steps:
 
-📸 Screenshots
-Login Page:(Add screenshot here)
-Notes Dashboard:(Add screenshot here)
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Commit your changes (git commit -m "Add your feature").
+Push to the branch (git push origin feature/your-feature).
+Open a pull request.
 
-🤝 Contributing
-Feel free to open issues or submit pull requests!
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+Contact
+For questions or feedback, open an issue or contact your-email@example.com.
 
-✅ Tip
-If you’d like, I can help you tailor this further or create a version with placeholder screenshots and badges. Just let me know!
+Tip: If you'd like to add specific badges, placeholders for screenshots, or further customization, let me know!
